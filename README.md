@@ -1,0 +1,10 @@
+This module allows the user to have a template automatically selected when the Compose New Message wizard pops up.
+For example, if we open a Customer's form and we click New Message on the bottom of the sheet, then click the fourth button that 
+opens up the popup wizard the Use Template will be automatically populated for us.
+
+To set this up, log in as administrator user, activate debug mode and go to Settings -> Default email templates.
+From here we can assosiate models (Sale Order, Customers, etc...) with the default email template. So that when we open the wizard
+described above the appropriate template will be filled in place.
+
+
+

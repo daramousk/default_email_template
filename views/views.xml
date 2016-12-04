@@ -1,0 +1,47 @@
+<odoo>
+	<record model="ir.ui.view" id="default_email_template.list">
+		<field name="name">default_email_template list</field>
+		<field name="model">default.email.template</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="ir_model_id" />
+				<field name="mail_template_id" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="default_email_template.form">
+		<field name="name">Default Email Templates form</field>
+		<field name="model">default.email.template</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<h4>Note: Make sure that the Mail Template you select or create has the 'Model' you select here as it's 'Apply To:'
+						field.
+					</h4>
+					<group>
+						<group>
+							<field name="ir_model_id" />
+						</group>
+						<group>
+							<field name="mail_template_id" />
+						</group>
+					</group>
+
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="default_email_template.open_default_email_settings">
+		<field name="name">Default Email Templates</field>
+		<field name="res_model">default.email.template</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+
+	<menuitem name="Default Email Templates" id="payment_request_menu" parent="base.menu_custom"
+		action="default_email_template.open_default_email_settings" sequence="100" />
+
+
+</odoo>
